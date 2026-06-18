@@ -31,6 +31,9 @@
                 <a href="#" class="nav-item" data-section="estadisticas">
                     📊 Estadísticas
                 </a>
+                <a href="#" class="nav-item" data-section="personalizacion">
+                    🎨 Personalización
+                </a>
                 <a href="#" class="nav-item" data-section="configuracion">
                     ⚙️ Configuración
                 </a>
@@ -145,16 +148,133 @@
                 </div>
             </section>
 
+            <!-- Personalización Section -->
+            <section id="personalizacion" class="section">
+                <div class="section-header">
+                    <h2>🎨 Personalización y Tema</h2>
+                </div>
+
+                <div class="personalization-container">
+                    <!-- Preview -->
+                    <div class="preview-section">
+                        <h3>👁️ Vista Previa</h3>
+                        <div class="preview-box">
+                            <div class="preview-header">
+                                <img id="previewLogo" src="images/logo.png" alt="Logo" class="preview-logo">
+                                <div>
+                                    <h4 id="previewName">AreGeek</h4>
+                                    <p id="previewTagline">Coleccionables</p>
+                                </div>
+                            </div>
+                            <div class="preview-colors">
+                                <div class="color-preview" id="previewPrimary"></div>
+                                <div class="color-preview" id="previewSecondary"></div>
+                                <div class="color-preview" id="previewAccent"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Configuración -->
+                    <form id="formPersonalizacion" class="personalization-form">
+                        <h3>⚙️ Información de la Tienda</h3>
+                        <div class="form-group">
+                            <label for="storeName">Nombre de la Tienda</label>
+                            <input type="text" id="storeName" placeholder="AreGeek">
+                        </div>
+                        <div class="form-group">
+                            <label for="storeTagline">Eslogan/Subtítulo</label>
+                            <input type="text" id="storeTagline" placeholder="Coleccionables">
+                        </div>
+
+                        <h3>🎯 Textos Principales</h3>
+                        <div class="form-group full-width">
+                            <label for="heroTitle">Título Hero</label>
+                            <input type="text" id="heroTitle" placeholder="🐧 Bienvenido a AreGeek Coleccionables">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="heroSubtitle">Subtítulo Hero</label>
+                            <input type="text" id="heroSubtitle" placeholder="Descubre nuestra colección...">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="contactText">Texto de Contacto</label>
+                            <input type="text" id="contactText" placeholder="¿Tienes preguntas?...">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="footerText">Texto de Footer</label>
+                            <input type="text" id="footerText" placeholder="© 2026 AreGeek...">
+                        </div>
+
+                        <h3>🖼️ Imágenes</h3>
+                        <div class="form-group">
+                            <label for="logoUrl">URL del Logo</label>
+                            <input type="text" id="logoUrl" placeholder="images/logo.png">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="heroBannerUrl">URL Banner Hero (opcional)</label>
+                            <input type="text" id="heroBannerUrl" placeholder="images/banner.jpg">
+                        </div>
+
+                        <h3>🎨 Colores</h3>
+                        <div class="colors-grid">
+                            <div class="form-group">
+                                <label for="colorPrimary">Color Principal</label>
+                                <input type="color" id="colorPrimary" value="#1b7a3a">
+                                <small id="colorPrimaryValue">#1b7a3a</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="colorSecondary">Color Secundario</label>
+                                <input type="color" id="colorSecondary" value="#e74c3c">
+                                <small id="colorSecondaryValue">#e74c3c</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="colorAccent">Color Acento</label>
+                                <input type="color" id="colorAccent" value="#f39c12">
+                                <small id="colorAccentValue">#f39c12</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="colorDark">Color Oscuro</label>
+                                <input type="color" id="colorDark" value="#2c3e50">
+                                <small id="colorDarkValue">#2c3e50</small>
+                            </div>
+                        </div>
+
+                        <h3>📱 Redes Sociales</h3>
+                        <div class="form-group">
+                            <label for="instagramUser">Usuario Instagram</label>
+                            <input type="text" id="instagramUser" placeholder="@aregeek">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="instagramLink">Link Instagram</label>
+                            <input type="url" id="instagramLink" placeholder="https://instagram.com/aregeek">
+                        </div>
+                        <div class="form-group">
+                            <label for="facebookPage">Página Facebook</label>
+                            <input type="text" id="facebookPage" placeholder="AreGeek Coleccionables">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="facebookLink">Link Facebook</label>
+                            <input type="url" id="facebookLink" placeholder="https://facebook.com/aregeek">
+                        </div>
+
+                        <div class="form-actions full-width">
+                            <button type="submit" class="btn-guardar">💾 Guardar Cambios</button>
+                            <button type="button" class="btn-reset" onclick="restaurarDefaults()">🔄 Restaurar Defecto</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
             <!-- Configuración Section -->
             <section id="configuracion" class="section">
                 <div class="section-header">
-                    <h2>⚙️ Configuración</h2>
+                    <h2>⚙️ Configuración General</h2>
                 </div>
 
                 <div class="config-section">
                     <h3>📥 Importar/Exportar Datos</h3>
                     <div class="config-actions">
-                        <button id="exportBtn" class="btn-export">📥 Descargar JSON</button>
+                        <button id="exportBtn" class="btn-export">📥 Descargar JSON (Productos)</button>
+                        <button id="exportConfigBtn" class="btn-export">📥 Descargar JSON (Config)</button>
                         <button id="importBtn" class="btn-import">📤 Importar JSON</button>
                         <input type="file" id="importFile" accept=".json" style="display: none;">
                     </div>
@@ -169,7 +289,7 @@
 
                 <div class="config-section">
                     <h3>ℹ️ Información</h3>
-                    <p>Versión: 1.0</p>
+                    <p>Versión: 2.0</p>
                     <p>Última actualización: <span id="lastUpdate">-</span></p>
                 </div>
             </section>
@@ -226,6 +346,7 @@
     <!-- Toast Notification -->
     <div id="toast" class="toast"></div>
 
+    <script src="js/admin-config.js"></script>
     <script src="js/admin.js"></script>
 </body>
 </html>

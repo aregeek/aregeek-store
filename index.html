@@ -11,10 +11,10 @@
     <header class="header">
         <div class="container">
             <div class="logo-section">
-                <img src="images/logo.png" alt="AreGeek Logo" class="logo">
+                <img id="headerLogo" src="images/logo.png" alt="AreGeek Logo" class="logo">
                 <div>
-                    <h1>AreGeek</h1>
-                    <p class="tagline">Coleccionables</p>
+                    <h1 id="storeName">AreGeek</h1>
+                    <p class="tagline" id="storeTagline">Coleccionables</p>
                 </div>
             </div>
             <nav class="nav">
@@ -22,6 +22,7 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#productos">Productos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="admin-login.html" class="admin-link">⚙️ Admin</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,9 +30,10 @@
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
+        <img id="heroBanner" src="" alt="Banner" class="hero-banner" style="display: none;">
         <div class="hero-content">
-            <h2>🐧 Bienvenido a AreGeek Coleccionables</h2>
-            <p>Descubre nuestra colección de figuras, peluches y coleccionables únicos</p>
+            <h2 id="heroTitle">🐧 Bienvenido a AreGeek Coleccionables</h2>
+            <p id="heroSubtitle">Descubre nuestra colección de figuras, peluches y coleccionables únicos</p>
             <a href="#productos" class="cta-button">Ver Productos</a>
         </div>
     </section>
@@ -63,18 +65,13 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>📱 Síguenos</h3>
-                    <div class="social-links">
-                        <a href="https://instagram.com/aregeek" target="_blank" class="social-btn instagram">
-                            Instagram @aregeek
-                        </a>
-                        <a href="https://facebook.com/aregeek" target="_blank" class="social-btn facebook">
-                            Facebook AreGeek Coleccionables
-                        </a>
+                    <div class="social-links" id="socialLinks">
+                        <!-- Se llena dinámicamente -->
                     </div>
                 </div>
                 <div class="contact-item">
                     <h3>📧 Consultas</h3>
-                    <p>¿Tienes preguntas? Contáctanos por nuestras redes sociales</p>
+                    <p id="contactText">¿Tienes preguntas? Contáctanos por nuestras redes sociales</p>
                 </div>
             </div>
         </div>
@@ -82,9 +79,10 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 AreGeek Coleccionables. Todos los derechos reservados.</p>
+        <p id="footerText">&copy; 2026 AreGeek Coleccionables. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

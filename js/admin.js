@@ -161,22 +161,10 @@ function eliminarProducto(id) {
 // Guardar productos en JSON
 function guardarProductos() {
     const contenido = JSON.stringify(productosData, null, 2);
-    
-    // Enviar al servidor para guardar
-    fetch('guardar-productos.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(productosData)
-    }).catch(err => {
-        console.log('Nota: Para guardar cambios permanentes, necesitas acceso al servidor.');
-        // Almacenar en localStorage como alternativa
-        localStorage.setItem('productosAreGeek', contenido);
-    });
+    localStorage.setItem('productosAreGeek', contenido);
 }
 
-// Exportar JSON
+// Exportar JSON (Productos)
 document.getElementById('exportBtn').addEventListener('click', () => {
     const dataStr = JSON.stringify(productosData, null, 2);
     const dataBlob = new Blob([dataStr], { type: 'application/json' });
@@ -185,7 +173,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     link.href = url;
     link.download = `aregeek-productos-${new Date().toISOString().split('T')[0]}.json`;
     link.click();
-    mostrarToast('✅ Archivo descargado');
+    mostrarToast('✅ Productos descargados');
 });
 
 // Importar JSON
