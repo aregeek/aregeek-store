@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreGeek Admin - Mantenedor</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="header-content">
+            <h1>🐧 AreGeek Admin Panel</h1>
+            <div class="header-actions">
+                <span id="userName">Administrador</span>
+                <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="admin-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="productos">
+                    📦 Productos
+                </a>
+                <a href="#" class="nav-item" data-section="crear">
+                    ➕ Crear Producto
+                </a>
+                <a href="#" class="nav-item" data-section="estadisticas">
+                    📊 Estadísticas
+                </a>
+                <a href="#" class="nav-item" data-section="configuracion">
+                    ⚙️ Configuración
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <!-- Productos Section -->
+            <section id="productos" class="section active">
+                <div class="section-header">
+                    <h2>📦 Gestión de Productos</h2>
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Buscar producto...">
+                    </div>
+                </div>
+
+                <div id="productosTable" class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productosBody">
+                            <tr><td colspan="6" style="text-align: center;">Cargando...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Crear Producto Section -->
+            <section id="crear" class="section">
+                <div class="section-header">
+                    <h2>➕ Crear Nuevo Producto</h2>
+                </div>
+
+                <form id="formCrearProducto" class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre del Producto *</label>
+                        <input type="text" id="nombre" required placeholder="Ej: My Little Pony - Twilight">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoria">Categoría *</label>
+                        <select id="categoria" required>
+                            <option value="">Selecciona una categoría</option>
+                            <option value="Figuras">Figuras</option>
+                            <option value="Peluches">Peluches</option>
+                            <option value="Accesorios">Accesorios</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="precio">Precio (USD) *</label>
+                        <input type="number" id="precio" step="0.01" min="0" required placeholder="19.99">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="descripcion">Descripción *</label>
+                        <textarea id="descripcion" required placeholder="Descripción detallada del producto..." rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="imagen">URL de Imagen</label>
+                        <input type="text" id="imagen" placeholder="images/productos/mi-producto.jpg">
+                    </div>
+
+                    <div class="form-actions full-width">
+                        <button type="submit" class="btn-guardar">Guardar Producto</button>
+                        <button type="reset" class="btn-cancelar">Limpiar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Estadísticas Section -->
+            <section id="estadisticas" class="section">
+                <div class="section-header">
+                    <h2>📊 Estadísticas</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total de Productos</h3>
+                        <p id="totalProductos" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Figuras</h3>
+                        <p id="totalFiguras" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Peluches</h3>
+                        <p id="totalPeluches" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Accesorios</h3>
+                        <p id="totalAccesorios" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Precio Promedio</h3>
+                        <p id="precioPromedio" class="stat-number">$0.00</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Inventario Total</h3>
+                        <p id="inventarioTotal" class="stat-number">$0.00</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Configuración Section -->
+            <section id="configuracion" class="section">
+                <div class="section-header">
+                    <h2>⚙️ Configuración</h2>
+                </div>
+
+                <div class="config-section">
+                    <h3>📥 Importar/Exportar Datos</h3>
+                    <div class="config-actions">
+                        <button id="exportBtn" class="btn-export">📥 Descargar JSON</button>
+                        <button id="importBtn" class="btn-import">📤 Importar JSON</button>
+                        <input type="file" id="importFile" accept=".json" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h3>🔄 Acciones</h3>
+                    <div class="config-actions">
+                        <button id="resetBtn" class="btn-reset">🔄 Restablecer Productos Demo</button>
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h3>ℹ️ Información</h3>
+                    <p>Versión: 1.0</p>
+                    <p>Última actualización: <span id="lastUpdate">-</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para editar producto -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Editar Producto</h2>
+                <button class="close-modal" onclick="cerrarModal()">&times;</button>
+            </div>
+            <form id="formEditarProducto" class="form-grid">
+                <input type="hidden" id="editId">
+                
+                <div class="form-group">
+                    <label for="editNombre">Nombre *</label>
+                    <input type="text" id="editNombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editCategoria">Categoría *</label>
+                    <select id="editCategoria" required>
+                        <option value="Figuras">Figuras</option>
+                        <option value="Peluches">Peluches</option>
+                        <option value="Accesorios">Accesorios</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="editPrecio">Precio (USD) *</label>
+                    <input type="number" id="editPrecio" step="0.01" min="0" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="editDescripcion">Descripción *</label>
+                    <textarea id="editDescripcion" required rows="4"></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="editImagen">URL de Imagen</label>
+                    <input type="text" id="editImagen">
+                </div>
+
+                <div class="form-actions full-width">
+                    <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                    <button type="button" class="btn-cancelar" onclick="cerrarModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
