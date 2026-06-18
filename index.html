@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreGeek Coleccionables - Tienda Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="images/logo.png" alt="AreGeek Logo" class="logo">
+                <div>
+                    <h1>AreGeek</h1>
+                    <p class="tagline">Coleccionables</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>🐧 Bienvenido a AreGeek Coleccionables</h2>
+            <p>Descubre nuestra colección de figuras, peluches y coleccionables únicos</p>
+            <a href="#productos" class="cta-button">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="productos" id="productos">
+        <div class="container">
+            <h2>📦 Nuestros Productos</h2>
+            
+            <!-- Filtros -->
+            <div class="filtros">
+                <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="Figuras">Figuras</button>
+                <button class="filtro-btn" data-filtro="Peluches">Peluches</button>
+                <button class="filtro-btn" data-filtro="Accesorios">Accesorios</button>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div class="productos-grid" id="productosGrid">
+                <div class="loading">Cargando productos...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2>📞 Contacto</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📱 Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/aregeek" target="_blank" class="social-btn instagram">
+                            Instagram @aregeek
+                        </a>
+                        <a href="https://facebook.com/aregeek" target="_blank" class="social-btn facebook">
+                            Facebook AreGeek Coleccionables
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Consultas</h3>
+                    <p>¿Tienes preguntas? Contáctanos por nuestras redes sociales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 AreGeek Coleccionables. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

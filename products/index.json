@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "My Little Pony - Twilight Sparkle",
+    "category": "Figuras",
+    "price": 18.99,
+    "description": "Figura coleccionable de Twilight Sparkle. Detallada con pintura de alta calidad y acabado premium.",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "My Little Pony - Pinkie Pie",
+    "category": "Figuras",
+    "price": 18.99,
+    "description": "Figura de Pinkie Pie en su característico color rosa. Perfecta para coleccionistas de MLP.",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "My Little Pony - Rainbow Dash",
+    "category": "Figuras",
+    "price": 18.99,
+    "description": "Figura de Rainbow Dash con sus alas desplegadas. Acabado de calidad premium.",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "My Little Pony - Fluttershy",
+    "category": "Figuras",
+    "price": 18.99,
+    "description": "Figura de Fluttershy con sus delicadas alas amarillas. Detalle impecable en cada pieza.",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "My Little Pony - Rarity",
+    "category": "Figuras",
+    "price": 18.99,
+    "description": "Figura de Rarity en blanco y gema. Articulaciones móviles para poses dinámicas.",
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Barbie Vintage - Colección Clásica",
+    "category": "Figuras",
+    "price": 24.99,
+    "description": "Figura Barbie de la colección vintage con ropa y accesorios originales. Excelente estado.",
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Peluche My Little Pony - Twilight Sparkle",
+    "category": "Peluches",
+    "price": 22.99,
+    "description": "Peluche suave de Twilight Sparkle con bordado detallado. Material hipoalergénico.",
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Peluche My Little Pony - Rainbow Dash",
+    "category": "Peluches",
+    "price": 22.99,
+    "description": "Peluche de Rainbow Dash con alas suaves. Cómodo al tacto. Ideal como regalo.",
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Peluche Pinguino - AreGeek",
+    "category": "Peluches",
+    "price": 19.99,
+    "description": "Peluche del icónico pinguino de AreGeek con bufanda roja. Suave y adorable.",
+    "image": ""
+  },
+  {
+    "id": 10,
+    "name": "Figura Action - Superhéroe",
+    "category": "Figuras",
+    "price": 16.99,
+    "description": "Figura articulada de superhéroe con accesorios intercambiables. Múltiples puntos de articulación.",
+    "image": ""
+  },
+  {
+    "id": 11,
+    "name": "Accesorio Coleccionable - Set de Joyas",
+    "category": "Accesorios",
+    "price": 12.99,
+    "description": "Set de joyas para figuras coleccionables. Incluye coronas y aretes dorados.",
+    "image": ""
+  },
+  {
+    "id": 12,
+    "name": "Vitrina de Exhibición",
+    "category": "Accesorios",
+    "price": 34.99,
+    "description": "Vitrina acrílica transparente para exhibir tus figuras. Con base integrada y iluminación LED.",
+    "image": ""
+  }
+]
